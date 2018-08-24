@@ -5,12 +5,20 @@
   </head>
   <body>
     <div class="container">
-      <h1>Offline document hasher</h1>
-        <input type="file"></input>
-      <button class="btn btn-primary">
-        <i class="glyphicon glyphicon-upload"></i>
-        <span>Generate hash</span>
-      </button>
+      <div id="inputform">
+        <h1>Offline document hasher</h1>
+        <input id="file" type="file"></input>
+        <button class="btn btn-primary">
+          <i class="glyphicon glyphicon-upload"></i>
+          <span>Generate hash</span>
+        </button>
+      </div>
+      <div id="success" class="alert alert-success topmargin" style="display: none;">
+        <strong>Success!</strong> Your hash is <span id="hash"></span> (took <span id="time"></span>ms)
+      </div>
+      <div id="error" class="alert alert-danger topmargin" style="display: none;">
+        <strong>Error!</strong> Did you select a file to hash?
+      </div>
     </div>
   </body>
 </html>
